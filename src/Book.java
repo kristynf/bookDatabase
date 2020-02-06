@@ -4,10 +4,23 @@ public class Book {
     private String author;
     private String description;
     private double price;
-//getters and setters for variables
+
+
+
+
     public Book() {
+
     }
 
+    public Book(String SKU, String title, String author, String description, double price) {
+        this.SKU = SKU;
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.price = price;
+    }
+
+    //getters and setters for variables
     public String getSKU() {
         return SKU;
     }
@@ -46,6 +59,10 @@ public class Book {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+    public String getDisplayText(){
+        return getTitle() + " " +getAuthor()+" "+ getDescription();
+
     }
 
 }
